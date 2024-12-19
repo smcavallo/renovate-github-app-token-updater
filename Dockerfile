@@ -7,7 +7,7 @@ RUN go mod download
 
 COPY ./pkg /opt/pkg
 
-ENV GOOS linux
+ENV GOOS=linux
 ENV CGO_ENABLED=0
 
 ARG VERSION
