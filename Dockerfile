@@ -1,4 +1,4 @@
-FROM golang:1.22 as builder
+FROM golang:1.23 AS builder
 
 WORKDIR /opt/
 
@@ -7,7 +7,7 @@ RUN go mod download
 
 COPY ./pkg /opt/pkg
 
-ENV GOOS linux
+ENV GOOS=linux
 ENV CGO_ENABLED=0
 
 ARG VERSION
